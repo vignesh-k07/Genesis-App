@@ -54,7 +54,7 @@ export const GenesisProvider = ({ children }) => {
         }
     
         const amount = ethers.BigNumber.from(tokenAmount)
-        const price = ethers.BigNumber.from('100000000000000')
+        const price = ethers.BigNumber.from('50000000000')
         const calcPrice = amount.mul(price)
     
         console.log(genesisCoinAddress)
