@@ -10,7 +10,7 @@ const styles = {
   inputContainer:
     "flex w-2/3 h-20 bg-[#4D4C7D] justify-center items-center rounded-lg m-5",
   resultContainer:
-    "flex flex-col w-5/6 h-3/6 bg-[#4D4C7D] items-center rounded-lg m-5 text-center p-10",
+    "flex flex-col w-5/6 h-4/6 bg-[#4D4C7D] items-center rounded-lg m-5 text-center p-10",
   input:
     "appearance-none block w-5/6 bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500",
   resultWord: "text-3xl font-bold",
@@ -55,7 +55,7 @@ const Hero = () => {
   return (
     <div className={styles.hero}>
       <div className={styles.resultContainer}>
-        {/* <div className={styles.clearX}>
+        <div className={styles.clearX}>
           <button
           onClick={() => {
             setAmountDue('')
@@ -63,7 +63,7 @@ const Hero = () => {
             setEtherscanLink('')
           }} 
           className={styles.button} type='button'>Clear</button>
-        </div> */}
+        </div>
         <div className={styles.title}>
           Buy Genesis Coins Here!
         </div>

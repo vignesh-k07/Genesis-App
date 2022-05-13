@@ -50,7 +50,7 @@ export const GenesisProvider = ({ children }) => {
     
       const buyTokens = async () => {
         if (!isAuthenticated) {
-          await authenticate()
+          await connectWallet()
         }
     
         const amount = ethers.BigNumber.from(tokenAmount)
@@ -70,12 +70,13 @@ export const GenesisProvider = ({ children }) => {
         }
 
         const transaction = await Moralis.executeFunction(options)
-        const receipt = await transaction.wait(4)
+        const receipt = await transaction.wait()
         setIsLoading(false)
         console.log(receipt)
         setEtherscanLink(
-          `https://rinkeby.etherscan.io/tx/${receipt.transactionHash}`,
+          `https://rinkeby.etherscan.io/tx/${receipt.transactionHash}`
         )
+        console.log(etherscanLink)
       }
 
       useEffect(() => {
